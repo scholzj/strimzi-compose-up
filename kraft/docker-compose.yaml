@@ -3,7 +3,7 @@ version: '2'
 services:
 
   kafka:
-    image: quay.io/strimzi/kafka:0.33.0-kafka-3.3.2
+    image: quay.io/strimzi/kafka:0.33.2-kafka-3.4.0
     command: [
       "sh", "-c",
       "./bin/kafka-storage.sh format -t $$(./bin/kafka-storage.sh random-uuid) -c ./config/kraft/server.properties && ./bin/kafka-server-start.sh ./config/kraft/server.properties"
