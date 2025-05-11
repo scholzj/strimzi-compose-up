@@ -1,7 +1,10 @@
-# Compose file for starting Kafka and Zookeeper using the Strimzi images
+# Compose file for starting Apache Kafka cluster using the Strimzi container images
 
-This repository contains a Docker Compose YAML file which allows you to start local Zookeeper and Kafka using the broker images.
-It uses the Strimzi container images and is currently based on Strimzi 0.45.0 / Apache Kafka 3.9.0.
-You can also use the [`./kraft`](./kraft/) subdirectory to run Kafka with the _Kraft_ mode (without ZooKeeper).
+This repository contains a Docker Compose YAML file which allows you to start local Apache Kafka cluster.
+It uses the Strimzi container images and is currently based on Strimzi 0.46.0 / Apache Kafka 4.0.0.
+As Kafka 4.0.0 does not support ZooKeeper anymore, there is only a KRaft based compose file.
+If you want to use ZooKeeper, check the [0.45.0 tag](https://github.com/scholzj/strimzi-compose-up/tree/0.45.0) which is based on Strimzi 0.45.0 and Apache Kafka 3.9.0 and still has ZooKeeper support as well.
+
+## Usage
 
 After installing Docker / Docker Compose on your machine, run `docker compose up` to start the Kafka broker. To shut it down, run `docker compose down`.
