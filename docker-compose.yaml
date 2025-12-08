@@ -1,6 +1,6 @@
 services:
   kafka:
-    image: quay.io/strimzi/kafka:0.49.0-kafka-4.1.1
+    image: quay.io/strimzi/kafka:0.49.1-kafka-4.1.1
     command: [
       "sh", "-c",
       "./bin/kafka-storage.sh format --standalone -t $$(./bin/kafka-storage.sh random-uuid) -c ./config/server.properties && ./bin/kafka-server-start.sh ./config/server.properties"
