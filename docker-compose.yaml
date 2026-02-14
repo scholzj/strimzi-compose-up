@@ -3,7 +3,7 @@ services:
     image: quay.io/strimzi/kafka:0.50.0-kafka-4.1.1
     command: [
       "sh", "-c",
-      "./bin/kafka-storage.sh format --standalone -t $$(./bin/kafka-storage.sh random-uuid) -c ./config/server.properties && ./bin/kafka-server-start.sh ./config/server.properties"
+      "./bin/kafka-storage.sh format --standalone -t $(./bin/kafka-storage.sh random-uuid) -c ./config/server.properties && ./bin/kafka-server-start.sh ./config/server.properties"
     ]
     ports:
     - "9092:9092"
